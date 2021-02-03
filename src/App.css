@@ -9,7 +9,7 @@
 }
 
 p {
-  opacity: 0;
+	opacity: 0;
 }
 
 .App-header {
@@ -28,19 +28,18 @@ p {
 }
 
 .circle {
-  width: 75px;
-  height: 75px;
-  background-color: #fdcf51;
-  border-radius: 100%;
-  margin: 50px;
+	width: 75px;
+	height: 75px;
+	background-color: #fdcf51;
+	border-radius: 100%;
+	margin: 50px;
+	border: solid 2px silver;
 }
 
 .circle.red {
-  background-color: red
+	background-color: red;
 }
 
 .circle.blue {
-  background-color: blue;
+	background-color: blue;
 }
-
-
