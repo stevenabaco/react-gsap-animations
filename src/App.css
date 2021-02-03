@@ -27,6 +27,20 @@ p {
 	color: #61dafb;
 }
 
-.circle {}
+.circle {
+  width: 75px;
+  height: 75px;
+  background-color: #fdcf51;
+  border-radius: 100%;
+  margin: 50px;
+}
+
+.circle.red {
+  background-color: red
+}
+
+.circle.blue {
+  background-color: blue;
+}
 
 

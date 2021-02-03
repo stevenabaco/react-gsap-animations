@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import logo from "./logo.svg";
 import { TweenMax, Power3 } from "gsap";
 import "./App.css";
+import Balls from './components/balls';
 
 function App() {
   let logoItem = useRef(null);
@@ -26,8 +27,7 @@ function App() {
 
 	console.log(logoItem);
 	return (
-    <div className="App">
-      <balls />
+		<div className="App">
 			<header className="App-header" alt="logo">
 				<img
 					ref={(el) => {
@@ -37,7 +37,12 @@ function App() {
 					className="App-Logo"
 					alt="logo"
 				/>
-				<p ref={el => {textItem = el}}>
+				<Balls />
+				<p
+					ref={(el) => {
+						textItem = el;
+					}}
+				>
 					Edit <code>src/App.js</code> and save to reload.
 				</p>
 				<a
