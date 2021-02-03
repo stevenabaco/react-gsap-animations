@@ -2,31 +2,37 @@ import React, { useRef, useEffect } from "react";
 import logo from "./logo.svg";
 import { TweenMax, Power3 } from "gsap";
 import "./App.css";
-import Balls from './components/balls';
+import Balls from "./components/balls";
 
 function App() {
-  let logoItem = useRef(null);
-  let textItem = useRef(null);
+	let app = useRef(null);
+	let logoItem = useRef(null);
+	let textItem = useRef(null);
 
 	useEffect(() => {
-		TweenMax.to(logoItem, 0.8, {
-		opacity: 1,
-		y: -20,
-		ease: Power3.easeOut,
-    }
-  )
-		TweenMax.to(textItem, 0.8, {
-		opacity: 1,
-		y: -20,
-      ease: Power3.easeOut,
-      delay: .5
-    }
-  )
-  
-  }, []);
+		TweenMax.to(app, 0, {
+			css: { visibility: "visible" },
+		});
+		TweenMax.to(logoItem, 1, {
+			opacity: 1,
+			y: -20,
+			ease: Power3.easeOut,
+		});
+		TweenMax.to(textItem, 1, {
+			opacity: 1,
+			y: -20,
+			ease: Power3.easeOut,
+			delay: 2,
+    });
+	}, []);
 
 	return (
-		<div className="App">
+		<div
+			ref={(target) => {
+				target = app = target;
+			}}
+			className="App"
+		>
 			<header className="App-header" alt="logo">
 				<img
 					ref={(el) => {
